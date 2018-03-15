@@ -1,0 +1,81 @@
+@import "../_vars";
+
+.items_panel {
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, .2);
+  border-radius: 1px;
+
+  h2 {
+    margin: 0;
+    padding: 15px 0 0 20px;
+    color: #565a69;
+    font-family: Myriad_Pro;
+  }
+
+  .add_item {
+    padding: 20px 15px 0 20px;
+
+    .input_item {
+      width: 73%;
+      margin: 0 0 5px;
+    }
+
+    .add_item_btn {
+      background-color: @blue_color;
+      color: #fff;
+      width: 25%;
+      vertical-align: top;
+    }
+
+    button:hover {
+      background-color: darken(@blue_color, 5%);
+    }
+  }
+
+  #items_list {
+    list-style: none;
+    padding: 10px 0 20px 0;
+
+    .li_item {
+      padding: 0 15px 0 20px;
+      width: 100%;
+      border-left: 4px solid transparent;
+
+      .item_link {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: bold;
+        color: #2b2f3e;
+        width: 78%;
+        padding: 15px 0;
+
+        .my_badge {
+          background-color: @blue_color;
+          margin: 0 0 0 10px;
+        }
+      }
+
+      .delete_btn {
+        border-color: @red_color;
+        color: @red_color;
+        background-color: #fff;
+        width: 20%;
+      }
+
+      .delete_btn:hover {
+        color: #fff;
+        background-color: @red_color;
+      }
+
+      .item_line {
+        margin: 0 5px 0 0;
+        height: 1px;
+        background-color: #f2f2f2;
+      }
+    }
+
+    .li_item:hover {
+      border-left: 4px solid @red_color !important;
+      transition: border .4s;
+    }
+  }
+}

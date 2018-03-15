@@ -1,0 +1,16 @@
+.side_panel {
+  background-color: #2b2f3e;
+  height: 100vh;
+}
+.side_panel h2 {
+  margin: 0;
+  padding: 20px 0 0 20px;
+  font-family: Myriad_Pro;
+  color: #fff;
+}
+.side_panel p {
+  padding: 0 0 0 20px;
+  font-family: Myriad_Pro;
+  font-size: 18px;
+  color: #808080;
+}

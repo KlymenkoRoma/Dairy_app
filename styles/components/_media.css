@@ -1,0 +1,10 @@
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .side_panel {
+    height: 100px;
+  }
+  .items_panel .add_item .input_item,
+  .items_panel .add_item .add_item_btn {
+    width: 50%;
+  }
+}

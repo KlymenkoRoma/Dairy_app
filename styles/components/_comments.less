@@ -1,0 +1,79 @@
+@import "../_vars";
+@import "../mixins/_comment_icon";
+
+.comments_panel {
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, .2);
+  border-radius: 1px;
+
+  h2 {
+    margin: 0;
+    padding: 15px 0 30px 20px;
+    color: #565a69;
+    font-family: Myriad_Pro;
+  }
+
+  #comments_list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .comment_item {
+      padding: 10px 20px 0;
+
+      .comment_icon {
+        .icon(#ff8a00);
+        vertical-align: top;
+        margin: 10px 10px 20px 0;
+      }
+
+      .comment_text {
+        text-align: justify;
+        width: 82%;
+        display: inline-block;
+        margin: 2px 0 20px;
+      }
+
+      .comment_line {
+        height: 1px;
+        background-color: #f2f2f2;
+      }
+    }
+
+    .comment_item:last-child {
+      .comment_text {
+        margin: 0 0 10px;
+      }
+
+      .comment_line {
+        display: none;
+      }
+    }
+
+    .comment_item:hover{
+
+      .comment_icon {
+        background-color: #47568c !important;
+        transition: background .4s;
+      }
+    }
+  }
+
+  .add_comment {
+    padding: 0 20px 10px;
+
+    .new_comment_icon {
+      .icon(#e6e6e6);
+      margin: 0 10px 0 0;
+    }
+
+    textarea {
+      width: 82%;
+      height: 50px;
+      vertical-align: top;
+    }
+  }
+}
+
+.visibility {
+  display: none;
+}

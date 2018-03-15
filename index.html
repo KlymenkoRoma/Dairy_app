@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="itemsManage">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Diary App</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="node_modules/toastr/build/toastr.min.css">
+
+    <style>
+        @font-face {
+            font-family: Myriad_Pro;
+            src: url(fonts/myriadpro-light.otf);
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+    <div class="row">
+        <aside class="col-md-3">
+            <div class="side_panel">
+                <h2 class="text-uppercase">dairy app</h2>
+                <p>Comment with no sense</p>
+            </div>
+        </aside>
+
+        <section ng-controller="ItemsManageCtrl" class="col-md-9">
+            <div class="main_panel">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="items_panel">
+                            <h2>Items</h2>
+                            <div class="form-inline add_item">
+                                <input class="form-control input_item" placeholder="Type name here..." ng-model="itemName">
+                                <button class="btn add_item_btn" type="button" ng-click="addItem()">Add new</button>
+                            </div>
+                            <ul id="items_list">
+                                <li class="li_item" ng-repeat="(key, val) in itemsList">
+                                    <a href="#" class="item_link" ng-click="loadComments(key, $event)">
+                                        {{key}}
+                                        <span class="badge my_badge">{{val.length}}</span>
+                                    </a>
+                                    <button class="btn delete_btn" ng-click="removeItem(key)">Delete</button>
+                                    <div class="item_line"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="comments_panel visibility">
+                            <h2>Comments #{{currentComment}}</h2>
+                            <ul id="comments_list">
+                                <li class="comment_item" ng-repeat="comment in commentsList track by $index"
+                                    ng-click="showCurrComment($index, $event)">
+                                    <div class="comment_icon"></div>
+                                    <p class="comment_text">{{comment}}</p>
+                                    <div class="comment_line"></div>
+                                </li>
+                            </ul>
+                            <div class="add_comment">
+                                <div class="new_comment_icon"></div>
+                                <textarea ng-model="itemComment" ctrl-enter-submit="addComment()"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/toastr/build/toastr.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

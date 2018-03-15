@@ -1,0 +1,66 @@
+.items_panel {
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 1px;
+}
+.items_panel h2 {
+  margin: 0;
+  padding: 15px 0 0 20px;
+  color: #565a69;
+  font-family: Myriad_Pro;
+}
+.items_panel .add_item {
+  padding: 20px 15px 0 20px;
+}
+.items_panel .add_item .input_item {
+  width: 73%;
+  margin: 0 0 5px;
+}
+.items_panel .add_item .add_item_btn {
+  background-color: #27ccc0;
+  color: #fff;
+  width: 25%;
+  vertical-align: top;
+}
+.items_panel .add_item button:hover {
+  background-color: #23b7ac;
+}
+.items_panel #items_list {
+  list-style: none;
+  padding: 10px 0 20px 0;
+}
+.items_panel #items_list .li_item {
+  padding: 0 15px 0 20px;
+  width: 100%;
+  border-left: 4px solid transparent;
+}
+.items_panel #items_list .li_item .item_link {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  color: #2b2f3e;
+  width: 78%;
+  padding: 15px 0;
+}
+.items_panel #items_list .li_item .item_link .my_badge {
+  background-color: #27ccc0;
+  margin: 0 0 0 10px;
+}
+.items_panel #items_list .li_item .delete_btn {
+  border-color: #ff3159;
+  color: #ff3159;
+  background-color: #fff;
+  width: 20%;
+}
+.items_panel #items_list .li_item .delete_btn:hover {
+  color: #fff;
+  background-color: #ff3159;
+}
+.items_panel #items_list .li_item .item_line {
+  margin: 0 5px 0 0;
+  height: 1px;
+  background-color: #f2f2f2;
+}
+.items_panel #items_list .li_item:hover {
+  border-left: 4px solid #ff3159 !important;
+  transition: border .4s;
+}
