@@ -1,0 +1,25 @@
+{
+  "name": "dairy_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KlymenkoRoma/Dairy_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KlymenkoRoma/Dairy_app/issues"
+  },
+  "homepage": "https://github.com/KlymenkoRoma/Dairy_app#readme",
+  "dependencies": {
+    "angular": "1.6.9",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.3.1",
+    "toastr": "^2.1.4"
+  }
+}
